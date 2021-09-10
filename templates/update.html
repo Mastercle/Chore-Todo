@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Chores to do</title>
+
+{% endblock %}
+
+{% block body %} 
+<div class="content">
+    <h1 style="text-align: center">Update Chore</h1>
+
+    <div class="form">
+        <form action="/update/{{chore.id}}" method="POST">
+            <input type="text" name="content" id="content" value="{{chore.content}}">
+            <input type="submit" value="Update">
+        
+        </form>
+    </div>
+</div>
+
+{% endblock %}
